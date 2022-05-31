@@ -1,0 +1,53 @@
+{
+    "name": "SellUp",
+    "version": "1.0.0",
+    "description": "A minimal Electron application",
+    "main": "index.js",
+    "scripts": {
+      "start": "electron .",
+      "rebuild": "electron-rebuild -f -w sqlite3",
+      "postinstall": "electron-builder install-app-deps",
+      "pack": "electron-builder --dir",
+      "dist": "electron-builder"
+    },
+    "repository": "https://github.com/electron/electron-quick-start",
+    "keywords": [
+      "Electron",
+      "quick",
+      "start",
+      "tutorial",
+      "demo"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+      "electron": "^18.2.0",
+      "electron-builder": "^23.0.3",
+      "electron-rebuild": "^3.2.7"
+    },
+    "dependencies": {
+      "knex": "^2.0.0",
+      "sqlite3": "^5.0.6"
+    },
+  
+    "build": {
+      "appId": "SellUP",
+      "productName": "SellUP",
+      "copyright": "Copyright © 2022 Francisco Bezerra",
+      "asar": "false",
+      "extraFiles": "migrations/*",
+      "win": {
+        "publisherName": "Francisco Bezerra",
+        "publish": [
+          "github"
+        ],
+        "target": [
+          "nsis"
+        ]
+      },
+      "publish": [
+        
+      ]
+    }
+  }
+  
